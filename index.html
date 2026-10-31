@@ -2,98 +2,104 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>С днюхой Максимбек!</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow-x: hidden;
-        }
 
-        main {
-            position: relative;
-            width: 100vw;
-            min-height: 100vh;
-        }
+        @media (max-width: 1445px) {
+            body {
+                height: 1000px;
+            }
 
-        .scene {
-            position: relative;
-            width: 100%;
-            padding-top: 80%;
-            background: #fff;
-        }
-
-        video {
-            position: absolute;
-            top: 35%;
-            left: 40%;
-            width: 30%;
-            max-width: 400px;
-            height: auto;
-            z-index: 5;
-            object-fit: contain;
-            display: block;
-        }
-
-        img {
-            position: absolute;
-            height: auto;
-            max-width: 100%;
-            object-fit: contain;
-            display: block;
-        }
-
-        #photo1 { bottom: 5%; left: 5%; width: 25%; z-index: 3; }
-        #photo2 { top: 5%; left: 42%; width: 30%; z-index: 6; }
-        #photo3 { bottom: 5%; left: 45%; width: 20%; z-index: 3; }
-        #photo4 { top: 5%; right: 5%; width: 25%; z-index: 1; }
-        #photo5 { top: 5%; left: 5%; width: 20%; z-index: 2; }
-        #photo6 { bottom: 5%; right: 5%; width: 50%; z-index: 2; }
-        #photo7 { top: 5%; left: 10%; width: 40%; z-index: 1; height: auto; }
-
-        @media (max-width: 768px) {
-            .scene { padding-top: 120%; }
             video {
-                top: 20%;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 80%;
+                position: absolute;
+                top: 35%;
+                left: 40%;
+                z-index: 5;
+                width: 30%;
+                height: 30%;
             }
-            #photo1, #photo2, #photo3, #photo4, #photo5, #photo6, #photo7 {
-                width: 35%;
-                bottom: auto;
-                top: auto;
-                left: auto;
-                right: auto;
+
+            #photo1 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 3;
+                width: 25%;
             }
-            #photo1 { bottom: 10%; left: 10%; }
-            #photo2 { top: 15%; left: 50%; transform: translateX(-50%); }
-            #photo4 { top: 15%; right: 10%; }
-            #photo6 { bottom: 10%; right: 10%; width: 40%; }
-            #photo5 {z-index: 0}
+
+            #photo2 {
+                position: absolute;
+                top: 0;
+                left: 42%;
+                width: 30%;
+                z-index: 6;
+            }
+
+            #photo3 {
+                position: absolute;
+                bottom: 0;
+                left: 45%;
+                z-index: 3;
+            }
+
+            #photo4 {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 25%;
+                z-index: 1;
+            }
+
+            #photo5 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+            }
+
+            #photo6 {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: 2;
+                width: 50%;
+            }
+
+            #photo7 {
+                position: absolute;
+                top: 0;
+                left: 10%;
+                z-index: 1;
+                height: 100%;
+            }
         }
+
+        @media (max-width: 450px) {
+            body {
+                height: 500px
+            }
+            #photo5 {
+                z-index: 0;
+            }
+        }
+
     </style>
 </head>
 <body>
-    <main>
-        <div class="scene">
-            <!-- Добавлен poster для наглядности -->
-            <video controls poster="paladebek/images/palade1.svg">
-                <source src="pal_max.mp4" type="video/mp4">
-                Ваш браузер не поддерживает видео.
-            </video>
+<header>
 
-            <img src="paladebek/images/palade1.svg" alt="максим" id="photo1">
-            <img src="paladebek/images/palade2.svg" alt="максим" id="photo2">
-            <img src="paladebek/images/palade3.svg" alt="максим" id="photo3">
-            <img src="paladebek/images/palade4.svg" alt="максим" id="photo4">
-            <img src="paladebek/images/palade5.svg" alt="максим" id="photo5">
-            <img src="paladebek/images/palade6.svg" alt="максим" id="photo6">
-            <img src="paladebek/images/palade7.svg" alt="максим" id="photo7">
-        </div>
-    </main>
+</header>
+<main>
+    <video controls width="250">
+        <source src="pal_max" type="video/mp4">
+    </video>
+    <img src="paladebek/images/palade1.svg" alt="максим" id="photo1">
+    <img src="paladebek/images/palade2.svg" alt="максим" id="photo2">
+    <img src="paladebek/images/palade3.svg" alt="максим" id="photo3">
+    <img src="paladebek/images/palade4.svg" alt="максим" id="photo4">
+    <img src="paladebek/images/palade5.svg" alt="максим" id="photo5">
+    <img src="paladebek/images/palade6.svg" alt="максим" id="photo6">
+    <img src="paladebek/images/palade7.svg" alt="максим" id="photo7">
+</main>
 </body>
 </html>
